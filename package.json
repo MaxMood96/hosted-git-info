@@ -26,10 +26,13 @@
     "preversion": "npm test",
     "snap": "tap",
     "test": "tap",
-    "test:coverage": "tap --coverage-report=html"
+    "test:coverage": "tap --coverage-report=html",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "lru-cache": "^6.0.0"
+    "lru-cache": "^6.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "standard": "^16.0.3",
@@ -48,5 +51,6 @@
     "color": 1,
     "coverage": true,
     "esm": false
-  }
+  },
+  "snyk": true
 }
